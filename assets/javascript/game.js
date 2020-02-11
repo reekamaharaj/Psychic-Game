@@ -23,13 +23,6 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
         userGuess = event.key;
         userGuess = userGuess.toLowerCase();
         //This triggers the computer to randomly select a string from array abc
-    
-    // if (abc.includes(letter)){
-
-    // }
-    // else {
-    //     alert('enter a letter');
-    // }
         if (letter === undefined){
     
         letter = abc[Math.floor(Math.random()*abc.length)];
@@ -37,6 +30,8 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
         }
         
         if (userGuess != 0){
+
+            if (abc.includes(userGuess)){
     
             if (userGuess === letter){
                 win++;
@@ -51,18 +46,24 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
                     alert('Already guessed');
                 }
                 else {
-                loss++;
                 guessCount--;
                 guesses.push(userGuess);
                 console.log(' win ' + win + ' lose ' + loss + ' guesses ' + guesses + ' guess count ' + guessCount);
                 console.log(letter);
                 }
             }
+        }
+
+        else {
+            alert('Enter a letter');
+        }
             // if guesscount = 0 then the guess count is set to 9 and the loop starts again
         if (guessCount === 0) {
+            loss++;
             guessCount = 9;
-            guesses = [];
+            guesses = [ ];
             letter = undefined;
+            alert(':c Out of guesses. Try again!')
             console.log('guesscount ' + guessCount + ' guesses ' + guesses + ' win ' + win + ' losses ' + loss);
         }
     }
@@ -73,9 +74,6 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
 
 
 
-
-// Still need to add something so you can't guess with anything other than letters - Make sure the guess is included in the abc array and if not then give back an error saying a letter must be guessed
-
 // computer generates a random letter(use Math.random()?) which is stored in letter variable
 //player presses a letter key as a guess
 //check to see if the userGuess is the same as letter
@@ -85,3 +83,5 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
 //process starts again
 //goes until the guessCount = 0 and then the game will reset
 //array with the letters in it or generate a random number from 0-25 and that is the letter it picks from the array - this is the computer's guess
+
+//user error accounted for -> can not enter anything that isn't a letter. case does not matter, will not accept a guess that has already been used

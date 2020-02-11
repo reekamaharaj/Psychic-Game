@@ -9,17 +9,48 @@
     <title>Psychic Game</title>
 </head>
 
-<body class="bg-teal-600">
-    <h1 class="text-5xl text-center text-white py-5">The Psychic Game</h1>
+<body class="bg-blue-500 text-white">
+  <h1 class="text-5xl text-center mt-10 py-5 bg-blue-600 border-solid border-4 mx-20">The Psychic Game</h1>
 
-    <div class="content container mx-auto px-10 py-20 block text-white">
-        <p class="text-lg">Guess what letter I'm thinking of! </p>
-        <span id="winScore">Wins: </p>
-        <span id="loseScore">Losses: </p>
-        <span id="guesses">Your Guesses so far: </p>
+<div class="text-center bg-blue-500">
+      <div class="flex">
+          <div class="flex-1 h-auto text-3xl my-5">
+              Guess what letter I'm thinking of!
+          </div>
+        </div>
+</div>
+
+  <div class="text-center bg-blue-700 border-4 mx-20 mb-5">
+      <div class="flex -m-auto">
+        <div class="w-1/3 border-r-4">
+          <div class="h-auto p-2">
+              Guesses Left:
+          </div>
+        </div>
+        <div class="w-1/3 border-r-4">
+          <div class="h-auto p-2">
+              Wins:
+          </div>
+        </div>
+        <div class="w-1/3">
+          <div class="h-auto p-2">
+              Losses:
+          </div>
+        </div>
+      </div>
     </div>
+  <div>
 
-    <script src="assets/javascript/game.js"></script>
+<div class="text-center bg-blue-500 mx-20">
+        <div class="flex">
+            <div class="flex-1 h-auto text-3xl">
+              Your guesses so far:
+            </div>
+          </div> 
+    </div>
+</div>
+
+<script src="assets/javascript/game.js"></script>
+
 </body>
-
 </html>
