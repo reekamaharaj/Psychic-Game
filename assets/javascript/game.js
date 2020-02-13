@@ -64,7 +64,7 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
             guessCount = 9;
             guesses = [ ];
             letter = undefined;
-            alert(':c Out of guesses. Try again!')
+            alert(':c Out of guesses. Try again!');
             document.getElementById("loss").innerText = loss;
             document.getElementById("guessesLeft").innerText = guessCount;
             document.getElementById("win").innerText = win;
@@ -72,53 +72,7 @@ const abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","
     }
     }
 
-// Guesses Left:
-// Wins:  
-// Losses:
-// Your guesses so far:
-//------------------------------------------------------------------------------------
-// make an empty div in the html id=guessCountDiv
-// var guessCountDiv = document.createElement("div");
-// guessCountDiv.textContent = guessCount;
-// targetGuessCountDiv.appendChild(guessCountDiv);
 
-// make an empty div in the html id=winDiv
-// var winDiv = document.createElement("div");
-// winDiv.textContent = win;
-// targetWinDiv.appendChild(winDiv);
-
-// make an empty div in the html id=lossCountDiv
-// var lossDiv = document.createElement("div");
-// lossDiv.textContent = loss;
-// targetLossDiv.appendChild(lossDiv);
-
-// make an empty div in the html id=guessesDiv
-// var guessesDiv = document.createElement("div");
-// guessesDiv.textContent = guesses;
-// targetGuessesDiv.appendChild(guessesDiv);
-
-//------------------------------------------------------------------------------------
-// make an empty div in the html id=guessCountDiv
-// var guessCountDiv = $("<div>");
-// guessCountDiv.text(guessCount);
-// $("#guessCountDiv").append(guessCountDiv);
-
-// make an empty div in the html id=winDiv
-// var winDiv = $("<div>");
-// winDiv.text(win);
-// $("#winDiv").append(winDiv);
-
-// make an empty div in the html id=lossDiv
-// var lossDiv = $("<div>");
-// lossDiv.text(loss);
-// $("#lossDiv").append(lossDiv);
-
-// make an empty div in the html id=guessesDiv
-// var guessesDiv = $("<div>");
-// guessesDiv.text(guesses);
-// $("#guessesDiv").append(guessesDiv);
-
-//------------------------------------------------------------------------------------
 // computer generates a random letter(use Math.random()?) which is stored in letter variable
 //player presses a letter key as a guess
 //check to see if the userGuess is the same as letter
